@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record model="ir.ui.view" id="view_cp_inventario_form">
+        <field name="name">cp.inventario.form</field>
+        <field name="model">cp.inventario</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Formulario de INVENTARIO">
+            <group col="4" colspan="2">
+                <field name="codigo" select="1"/>
+                <field name="marca_id" select="2"/>
+                <field name="serial" select="0"/>
+                <field name="parte" select="0"/>
+                <field name="descripcion" select="0"/>
+                <field name="proveedor_id" select="0"/>
+                <field name="status_id" select="0"/>
+                <field name="ubicacion" select="0"/>
+                <field name="fecha_compra" select="0"/>
+
+            </group>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_cp_inventario_tree">
+        <field name="name">cp.inventario.tree</field>
+        <field name="model">cp.inventario</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Listado de INVENTARIO">
+                <field name="codigo"/>
+                <field name="marca_id"/>
+                <field name="serial"/>
+                <field name="parte"/>
+                <field name="descripcion"/>
+                <field name="proveedor_id"/>
+                <field name="status_id"/>
+                <field name="ubicacion"/>
+                <field name="fecha_compra"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_cp_inventario">
+        <field name="name">inventario</field>
+        <field name="res_model">cp.inventario</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+
+        
+    <record model="ir.ui.view" id="view_cp_marca_form">
+        <field name="name">cp.marca.form</field>
+        <field name="model">cp.marca</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Formulario marcas">
+            <group col="4" colspan="2">
+                <field name="marca" select="1"/>
+
+            </group>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_cp_marca_tree">
+        <field name="name">cp.marca.tree</field>
+        <field name="model">cp.marca</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Listado de marcas">
+                <field name="marca"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_cp_marca">
+        <field name="name">marca</field>
+        <field name="res_model">cp.marca</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+
+        
+    <record model="ir.ui.view" id="view_cp_status_bien_form">
+        <field name="name">cp.status.bien.form</field>
+        <field name="model">cp.status.bien</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Formulario Status del Bien">
+            <group col="4" colspan="2">
+                <field name="status" select="1"/>
+
+            </group>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_cp_status_bien_tree">
+        <field name="name">cp.status.bien.tree</field>
+        <field name="model">cp.status.bien</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Listado de Status del Bien">
+                <field name="status"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_cp_status_bien">
+        <field name="name">status</field>
+        <field name="res_model">cp.status.bien</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+
+        
+    <record model="ir.ui.view" id="view_cp_provee_form">
+        <field name="name">cp.provee.form</field>
+        <field name="model">cp.provee</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Formulario de Proveedor">
+            <group col="4" colspan="2">
+                <field name="proveedor" select="1"/>
+                <field name="direccion" select="2"/>
+                <field name="estado_id" select="0"/>
+                <field name="municipio_id" select="0"/>
+                <field name="parroquia_id" select="0"/>
+                <field name="contacto" select="0"/>
+                <field name="tel_fijo" select="0"/>
+                <field name="tel_cel" select="0"/>
+                <field name="tel_otro" select="0"/>
+                <field name="pagweb" select="0"/>
+                <field name="otro" select="0"/>
+
+            </group>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_cp_provee_tree">
+        <field name="name">cp.provee.tree</field>
+        <field name="model">cp.provee</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Listado de Proveedores">
+                <field name="proveedor"/>
+                <field name="direccion"/>
+                <field name="estado_id"/>
+                <field name="municipio_id"/>
+                <field name="parroquia_id"/>
+                <field name="contacto"/>
+                <field name="tel_fijo"/>
+                <field name="tel_cel"/>
+                <field name="tel_otro"/>
+                <field name="pagweb"/>
+                <field name="otro"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_cp_provee">
+        <field name="name">proveedor</field>
+        <field name="res_model">cp.provee</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+
+        
+    <record model="ir.ui.view" id="view_cp_estados_form">
+        <field name="name">cp.estados.form</field>
+        <field name="model">estado</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Formulario de Estados">
+            <group col="4" colspan="2">
+                <field name="codigo" select="1"/>
+                <field name="estado" select="2"/>
+
+            </group>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_cp_estados_tree">
+        <field name="name">cp.estados.tree</field>
+        <field name="model">estado</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Listado de Estados">
+                <field name="codigo"/>
+                <field name="estado"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_cp_estados">
+        <field name="name">Estados</field>
+        <field name="res_model">estado</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+
+        
+    <record model="ir.ui.view" id="view_cp_municipios_form">
+        <field name="name">cp.municipios.form</field>
+        <field name="model">municipio</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Formulario de Municipios">
+            <group col="4" colspan="2">
+                <field name="codigo" select="1"/>
+                <field name="municipio" select="2"/>
+                <field name="estado_id" select="0"/>
+
+            </group>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_cp_municipios_tree">
+        <field name="name">cp.municipios.tree</field>
+        <field name="model">municipio</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Listado de Municipios">
+                <field name="codigo"/>
+                <field name="municipio"/>
+                <field name="estado_id"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_cp_municipios">
+        <field name="name">Municipios</field>
+        <field name="res_model">municipio</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+
+        
+    <record model="ir.ui.view" id="view_cp_parroquias_form">
+        <field name="name">cp.parroquias.form</field>
+        <field name="model">parroquia</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Formulario de Parroquias">
+            <group col="4" colspan="2">
+                <field name="codigo" select="1"/>
+                <field name="parroquia" select="2"/>
+                <field name="municipio_id" select="0"/>
+
+            </group>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_cp_parroquias_tree">
+        <field name="name">cp.parroquias.tree</field>
+        <field name="model">parroquia</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Listado de Parroquias">
+                <field name="codigo"/>
+                <field name="parroquia"/>
+                <field name="municipio_id"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_cp_parroquias">
+        <field name="name">Parroquias</field>
+        <field name="res_model">parroquia</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    
+    
+    
+    <!--============================= MENUES ======================================== -->
+    <menuitem name="inventario" id="menu_cp_inventario" action="action_cp_inventario"/>
+    <menuitem name="marca" id="menu_cp_marca" action="action_cp_marca"/>
+    <menuitem name="status" id="menu_cp_status_bien" action="action_cp_status_bien"/>
+    <menuitem name="proveedor" id="menu_cp_provee" action="action_cp_provee"/>
+    <menuitem name="Estados" id="menu_cp_estados" action="action_cp_estados"/>
+    <menuitem name="Municipios" id="menu_cp_municipios" action="action_cp_municipios"/>
+    
+    
+    <menuitem name="Parroquias" id="menu_cp_parroquias" action="action_cp_parroquias"/>
+
+        
+   
+
+        
+</data>
+</openerp>

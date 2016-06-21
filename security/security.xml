@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="group_cp_adm" model="res.groups">
+            <field name="name">CP / ADM</field>
+        </record>
+        <record id="group_cp_usr" model="res.groups">
+            <field name="name">CP / User</field>
+        </record>
+        <record id="group_cp_mnt" model="res.groups">
+            <field name="name">CP / Mant</field>
+        </record>
+    </data>
+</openerp>
