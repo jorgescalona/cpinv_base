@@ -266,17 +266,17 @@
     </record>
     
     <!--============================= MENUES ======================================== -->
-    <menuitem name="INVENTARIO" id="menu_cp_inventario" />
+    <menuitem name="Inventario" id="menu_cp_inventario" />
 		<menuitem name="Inventario" parent="menu_cp_inventario" id="sub1_menu_cp_inventario" sequence="10"/>
 			<menuitem name="Inventario" parent="sub1_menu_cp_inventario" id="sub2_menu_cp_inventario" action="action_cp_inventario" sequence="20"/>
 		    <menuitem name="Marca" parent="sub1_menu_cp_inventario" id="sub2_menu_cp_marca_inventario" action="action_cp_marca" sequence="30"/>   
 		    <menuitem name="Status" parent="sub1_menu_cp_inventario" id="sub2_menu_cp_status_inventario" action="action_cp_status_bien" sequence="40"/>   
 
-    <menuitem name="PROVEEDOR" id="menu_cp_provee"/>
+    <menuitem name="Proveedores" id="menu_cp_provee"/>
 		<menuitem name="Proveedor" parent="menu_cp_provee" id="sub1_menu_cp_provee" sequence="50"/>
     			<menuitem name="Proveedor" parent="sub1_menu_cp_provee" id="sub2_menu_cp_provee" action="action_cp_provee" sequence="60"/>
     			
-    <menuitem name="CONFIGURACION" id="menu_cp_config"/>
+    <menuitem name="Div Política" id="menu_cp_config"/>
 		<menuitem name="División Política Terr" parent="menu_cp_config" id="sub1_menu_cp_dpt" sequence="70"/>
     			<menuitem name="Estados" parent="sub1_menu_cp_dpt" id="sub11_menu_cp_dpt" action="action_cp_estados" sequence="80"/>
      			<menuitem name="Municipios" parent="sub1_menu_cp_dpt" id="sub12_menu_cp_dpt" action="action_cp_municipios" sequence="90"/>

@@ -24,16 +24,22 @@
 ##############################################################################
 {
         "name" : "cpinv_base",
-        "version" : "0.0.1",
+        "version" : "0.0.2",
         "author" : "jorgescalona @jorgemustaine",
         "website" : "http://www.attakatara.wordpress.com",
         "category" : "Desconocida",
         "description": """ modulo para el control de inventarios de civil proyect
-                           adaptación al mes de Mayo de 2016 """,
+                           adaptación al mes de Mayo de 2016, en Junio 2016 se agregan
+                           herencias a res_company y modificaciones de sus vistas """,
         "depends" : ['base', 'l10n_ve_dpt'],
+        "data" : ["views/res_company.xml",
+                    'views/cpinv_view.xml', 
+                    'security/ir.model.access.csv', 
+                    'security/security.xml'
+                 ],
         "init_xml" : [ ],
         "demo_xml" : [ ],
-        "update_xml" : ['views/cpinv_view.xml', 'security/ir.model.access.csv', 'security/security.xml'],
+        #"update_xml" : ['views/cpinv_view.xml', 'security/ir.model.access.csv', 'security/security.xml'],
         "installable": True,
         #"data":['security/security.xml','security/ir.model.access.csv'],
 }

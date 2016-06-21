@@ -22,3 +22,4 @@
 #
 
 import cpinv_base
+import res_company
