@@ -38,7 +38,7 @@ class cp_inventario(models.Model):
     ubicacion = fields.Char('ubicacion', size=30, required=True, help='ubicación geográfica del equipo, consumible o herramienta')
     fecha_compra = fields.Datetime('fecha de compra', help='indica la fecha de compra del bien cosumible o herramienta')
     active = fields.Boolean('Activo', help='Una herramienta o material puede ser activado según su disponibilidad')
-    _defaults={'active':True,}
+    _defaults={'active':True}
 
 
 class cp_marca(models.Model):
@@ -71,7 +71,7 @@ class cp_provee(models.Model):
     pagweb = fields.Char('pagina web', size=30, help='sitio web del proveedor')
     otro = fields.Char('info', size=100, help='cualquier otro comentario sobre el proveedor')
     active = fields.Boolean('Activo', help='Un proveedor puede estar activo o no según la relación con el mismo')
-    _defaults={'active':True,}
+    _defaults={'active':True}
     
     #def pulsar_estado(self,cr,ids,context=None):
     #    """ esta función se encarga de limpiar los campos de mun y parr cuando

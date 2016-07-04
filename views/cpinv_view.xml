@@ -18,6 +18,7 @@
                 <field name="status_id" select="0"/>
                 <field name="ubicacion" select="0"/>
                 <field name="fecha_compra" select="0"/>
+                <field name="active" select="0"/>
 
             </group>
             </form>
