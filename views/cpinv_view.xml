@@ -122,7 +122,7 @@
                 <field name="proveedor" select="1"/>
                 <field name="direccion" select="0"/>
                 <field name="estado_id" select="0" required="True" on_change="pulsar_estado"/>
-                <field name="municipio_id" domain="[('estado_id','=',[estado_id])]" select="0" required="1" on_change="pulsar_municipio"/>
+                <field name="municipio_id" domain="[('estado_id','=',[estado_id])]" select="0" required="1" />
                 <field name="parroquia_id" domain="[('municipio_id','=',[municipio_id])]" select="0" required="1" />
                 <field name="contacto" select="0"/>
                 <field name="tel_fijo" select="0"/>
