@@ -73,14 +73,12 @@ class cp_provee(models.Model):
     active = fields.Boolean('Activo', help='Un proveedor puede estar activo o no según la relación con el mismo')
     _defaults={'active':True}
     
-    #@api.onchange('estado_id')
-    def pulsar_estado(self, cr, ids, uid, context=None):
-    #def pulsar_estado(self):
+    def pulsar_estado(self, cr, ids, context=None):
         """ esta función se encarga de limpiar los campos de mun y parr cuando se pulse estado """
         return {'value':{'municipio_id':'','parroquia_id':''}}
-    #def pulsar_municipio(self,cr,ids,context=None):
-    #    """ esta función se encarga de limpiar el campo de parr cuandose pulse municipio """
-    #    return {'value':{'parroquia_id':''}}
+    def pulsar_municipio(self, cr, ids, context=None):
+        """ esta función se encarga de limpiar el campo de parr cuandose pulse municipio """
+        return {'value':{'parroquia_id':''}}
 
 class estado(models.Model):
     """Tabla de Referencia de Estados (Geografico)"""
