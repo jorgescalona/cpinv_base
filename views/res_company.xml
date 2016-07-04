@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 	<data>
-		
+
 		<record model="ir.ui.view" id="view_cpinv_res_company_form">
 			<field name="name">Compañia</field>
 			<field name="model">res.company</field>
@@ -24,16 +24,16 @@
 				</xpath>
 				<!-- Cambiar el lema -->
 				<xpath expr="/form/sheet/notebook/page/group/group/label[@for='rml_header1']" position="attributes">
-					<!-- Lema de la universidad -->
+					<!-- Lema de la empresa -->
 					<attribute name="string">Lema de la Empresa</attribute>
 				</xpath>
 				<xpath expr="/form/sheet/notebook/page/group/group/field[@name='company_registry']" position="attributes">
-					<!-- Registro de la universidad -->
+					<!-- Registro de la empresa -->
 					<attribute name="string">Registro de la Empresa</attribute>
 				</xpath>
 			</field>
 		</record>
-			
+
 
 	</data>
 </openerp>
