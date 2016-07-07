@@ -8,19 +8,20 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <form string="Formulario de INVENTARIO">
-            <group col="4" colspan="2">
-                <field name="codigo" select="1"/>
-                <field name="marca_id" select="0"/>
-                <field name="serial" select="0"/>
-                <field name="parte" select="0"/>
-                <field name="descripcion" select="0"/>
-                <field name="proveedor_id" select="0"/>
-                <field name="status_id" select="0"/>
-                <field name="ubicacion" select="0"/>
-                <field name="fecha_compra" select="0"/>
-                <field name="active" select="0"/>
-
-            </group>
+                <sheet>
+                    <group col="4" colspan="2">
+                        <field name="codigo" select="1"/>
+                        <field name="marca_id" select="0"/>
+                        <field name="serial" select="0"/>
+                        <field name="parte" select="0"/>
+                        <field name="descripcion" select="0"/>
+                        <field name="proveedor_id" select="0"/>
+                        <field name="status_id" select="0"/>
+                        <field name="ubicacion" select="0"/>
+                        <field name="fecha_compra" select="0"/>
+                        <field name="active" select="0"/>
+                    </group>
+                </sheet>    
             </form>
         </field>
     </record>
@@ -56,10 +57,11 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <form string="Formulario marcas">
-            <group col="4" colspan="2">
-                <field name="marca" select="1"/>
-
-            </group>
+                <sheet>
+                    <group col="4" colspan="2">
+                        <field name="marca" select="1"/>
+                    </group>
+                </sheet>
             </form>
         </field>
     </record>
@@ -87,10 +89,11 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <form string="Formulario Status del Bien">
-            <group col="4" colspan="2">
-                <field name="status" select="1"/>
-
-            </group>
+                <sheet>
+                    <group col="4" colspan="2">
+                        <field name="status" select="1"/>
+                    </group>
+                </sheet>
             </form>
         </field>
     </record>
@@ -118,21 +121,22 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <form string="Formulario de Proveedor">
-            <group col="4" colspan="2">
-                <field name="proveedor" select="1"/>
-                <field name="direccion" select="0"/>
-                <field name="estado_id" select="0" required="True" on_change="pulsar_estado()"/>
-                <field name="municipio_id" domain="[('estado_id','=',[estado_id])]" select="0" required="1" on_change="pulsar_municipio()"/>
-                <field name="parroquia_id" domain="[('municipio_id','=',[municipio_id])]" select="0" required="1" />
-                <field name="contacto" select="0"/>
-                <field name="tel_fijo" select="0"/>
-                <field name="tel_cel" select="0"/>
-                <field name="tel_otro" select="0"/>
-                <field name="pagweb" select="0"/>
-                <field name="otro" select="0"/>
-                <field name="active" select="0"/>
-
-            </group>
+                <sheet>
+                    <group col="4" colspan="2">
+                        <field name="proveedor" select="1"/>
+                        <field name="direccion" select="0"/>
+                        <field name="estado_id" select="0" required="True" on_change="pulsar_estado()"/>
+                        <field name="municipio_id" domain="[('estado_id','=',[estado_id])]" select="0" required="1" on_change="pulsar_municipio()"/>
+                        <field name="parroquia_id" domain="[('municipio_id','=',[municipio_id])]" select="0" required="1" />
+                        <field name="contacto" select="0"/>
+                        <field name="tel_fijo" select="0"/>
+                        <field name="tel_cel" select="0"/>
+                        <field name="tel_otro" select="0"/>
+                        <field name="pagweb" select="0"/>
+                        <field name="otro" select="0"/>
+                        <field name="active" select="0"/>
+                    </group>
+                </sheet>
             </form>
         </field>
     </record>
@@ -153,7 +157,6 @@
                 <field name="tel_otro"/>
                 <field name="pagweb"/>
                 <field name="otro"/>
-
             </tree>
         </field>
     </record>
@@ -170,11 +173,12 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <form string="Formulario de Estados">
-            <group col="4" colspan="2">
-                <field name="codigo" select="0"/>
-                <field name="estado" select="1"/>
-
-            </group>
+                <sheet>
+                    <group col="4" colspan="2">
+                        <field name="codigo" select="0"/>
+                        <field name="estado" select="1"/>
+                    </group>
+                </sheet>
             </form>
         </field>
     </record>
@@ -186,7 +190,6 @@
             <tree string="Listado de Estados">
                 <field name="codigo"/>
                 <field name="estado"/>
-
             </tree>
         </field>
     </record>
@@ -203,12 +206,13 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <form string="Formulario de Municipios">
-            <group col="4" colspan="2">
-                <field name="codigo" select="0"/>
-                <field name="municipio" select="1"/>
-                <field name="estado_id" select="0"/>
-
-            </group>
+                <sheet>
+                    <group col="4" colspan="2">
+                        <field name="codigo" select="0"/>
+                        <field name="municipio" select="1"/>
+                        <field name="estado_id" select="0"/>
+                    </group>
+                </sheet>
             </form>
         </field>
     </record>
@@ -221,7 +225,6 @@
                 <field name="codigo"/>
                 <field name="municipio"/>
                 <field name="estado_id"/>
-
             </tree>
         </field>
     </record>
@@ -238,12 +241,13 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <form string="Formulario de Parroquias">
-            <group col="4" colspan="2">
-                <field name="codigo" select="0"/>
-                <field name="parroquia" select="1"/>
-                <field name="municipio_id" select="0"/>
-
-            </group>
+                <sheet>
+                    <group col="4" colspan="2">
+                        <field name="codigo" select="0"/>
+                        <field name="parroquia" select="1"/>
+                        <field name="municipio_id" select="0"/>
+                    </group>
+                </sheet>
             </form>
         </field>
     </record>
@@ -256,7 +260,6 @@
                 <field name="codigo"/>
                 <field name="parroquia"/>
                 <field name="municipio_id"/>
-
             </tree>
         </field>
     </record>
